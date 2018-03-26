@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Create Table Person
         SugarRecord.executeQuery("CREATE TABLE IF NOT EXISTS Person (ID INTEGER PRIMARY KEY, NAME TEXT, AGE INTEGER, JOB TEXT);");
 
         List<Person> lstPerson = Person.listAll(Person.class);
